@@ -159,7 +159,7 @@ export default function Page() {
 
           <div className="flex-1 bg-gray-800 p-10 flex flex-col justify-center">
             <h2 className="text-2xl font-semibold text-center text-white mb-4">
-              {isLogin ? '🔐 Login to NoteStack' : '✨ Create your NoteStack Account'}
+              {/* {isLogin ? '🔐 Login to NoteStack' : '✨ Create your NoteStack Account'} */}
             </h2>
             {isLogin ? <LoginForm /> : <RegisterForm />}
           </div>
@@ -173,7 +173,12 @@ export default function Page() {
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="flex justify-between items-center">
           <h1 className="text-3xl font-bold text-indigo-400 flex items-center gap-2">
-            🧠 <span>NoteStack</span>
+            <img
+    src="icon.svg"
+    alt="NoteStack Logo"
+    className="w-7 h-7"
+  /> <span><span style={{ color: "#00eaff" }}>Note</span>
+  <span style={{ color: "#3b82f6" }}>Stack</span></span>
           </h1>
           <button
             onClick={handleLogout}

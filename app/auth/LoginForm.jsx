@@ -26,8 +26,18 @@ export default function LoginForm() {
 
   return (
     <form onSubmit={handleLogin} className="space-y-4">
-      <h1 className="text-3xl font-bold text-center text-indigo-400 mb-2">NoteStack</h1>
-      <h2 className="text-2xl font-semibold text-center text-indigo-400 mb-4">🔐 Login</h2>
+       <h1 className="flex items-center justify-center gap-2 text-3xl font-bold mb-6">
+        <img
+          src="/icon.svg"
+          alt="NoteStack Logo"
+          className="w-8 h-8"
+        />
+        <span>
+          <span style={{ color: '#00eaff' }}>Note</span>
+          <span style={{ color: '#3b82f6' }}>Stack</span>
+        </span>
+      </h1>
+      <h2 className="text-2xl font-semibold text-center text-indigo-400 mb-4">🔐 Login to NoteStack</h2>
       <input
         type="email"
         placeholder="Email"

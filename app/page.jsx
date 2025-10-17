@@ -139,9 +139,8 @@ export default function Page() {
           animate={{ opacity: 1 }}
         >
           <div
-            className={`flex-1 text-white flex flex-col justify-center items-center p-10 transition-colors duration-500 ${
-              isLogin ? 'bg-indigo-800' : 'bg-gray-700'
-            }`}
+            className='flex-1 text-white flex flex-col justify-center items-center p-10 transition-colors duration-500 bg-indigo-800'
+      
           >
             <h1 className="text-4xl font-bold mb-4">{isLogin ? 'Welcome Back!' : 'Hello, Friend!'}</h1>
             <p className="text-center max-w-xs">

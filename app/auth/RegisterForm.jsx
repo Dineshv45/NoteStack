@@ -48,7 +48,7 @@ export default function RegisterForm() {
 
   return (
     <form onSubmit={handleRegister} className="space-y-4">
-      <h1 className="text-3xl font-bold text-center text-indigo-400 mb-2"> <h1 className="flex items-center justify-center gap-2 text-3xl font-bold mb-2">
+     <h1 className="flex items-center justify-center gap-2 text-3xl font-bold mb-2">
   <img
     src="/icon.svg"
     alt="NoteStack Logo"
@@ -58,7 +58,6 @@ export default function RegisterForm() {
     <span style={{ color: "#00eaff" }}>Note</span>
     <span style={{ color: "#3b82f6" }}>Stack</span>
   </span>
-</h1>
 </h1>
       <h2 className="text-2xl font-semibold text-center text-indigo-400 mb-4">✨ Create your NoteStack Account</h2>
       <input type="text" placeholder="Username" value={username} onChange={(e) => setUsername(e.target.value)} required className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:ring-2 focus:ring-indigo-500" />

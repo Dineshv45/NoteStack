@@ -35,9 +35,10 @@ git clone https://github.com/yourusername/noteStack.git
 ```
 
 2️⃣ Install Dependencies
-
+```
 cd noteStack
 npm install
+```
 
 3️⃣ Setup Supabase
 Go to Supabase
@@ -56,8 +57,9 @@ NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
 NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
 5️⃣ Run the App
+```
 npm run dev
-
+```
 
 🧑‍💻 Author
 Dinesh Vattipally

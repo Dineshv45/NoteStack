@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+NoteStack
 
-## Getting Started
+NoteStack is a modern, collaborative note-taking app built with Next.js, Supabase and Markdown support.  
+It allows users to create, edit, share, and export notes in an elegant and secure interface.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Features
+
+- 📝 Rich Markdown Editor – Write formatted text, code blocks, and more using `@uiw/react-md-editor`.
+- 👥 Shared Notes – Invite others via email and collaborate using Supabase Row-Level Security (RLS).
+- 💾 Import & Export Notes – Save all your notes as JSON or import them anytime.
+- 🔐 Secure Authentication – Powered by Supabase Auth (email & password).
+- 🎨 Beautiful Animated UI – Smooth transitions for login/register using Framer Motion.
+- 🌙 Dark Mode Design – Minimal, modern interface with consistent theme.
+
+---
+
+## 🛠️ Tech Stack
+
+- Next.js 14 (App Router)
+- Supabase (Auth + Database)
+- Framer Motion (Animations)
+- Tailwind CSS (Styling)
+- @uiw/react-md-editor (Rich Text Markdown Editor)
+- File Saver (Export notes)
+
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Clone the Repository
+```
+git clone https://github.com/yourusername/noteStack.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2️⃣ Install Dependencies
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+cd noteStack
+npm install
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3️⃣ Setup Supabase
+Go to Supabase
+Create a new project.
+Add a notes table with the following fields:
+id: UUID (Primary Key)
+title: Text
+content: Text
+user_id: UUID (Foreign Key referencing auth.users)
+shared_with: text[] (Array)
+created_at: Timestamp (Default: now())
+Enable Row Level Security (RLS) and configure policies for shared access.
 
-## Learn More
+4️⃣ Configure Environment Variables
+NEXT_PUBLIC_SUPABASE_URL=your-supabase-url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your-anon-key
 
-To learn more about Next.js, take a look at the following resources:
+5️⃣ Run the App
+npm run dev
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+🧑‍💻 Author
+Dinesh Vattipally
+Built with using Next.js & Supabase
